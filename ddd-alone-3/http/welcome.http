@@ -2,3 +2,24 @@
 GET {{host}}/
 
 ###
+GET {{host}}/api/pokemons/1
+
+###
+GET {{host}}/api/pokemons/2
+
+###
+POST {{host}}/api/trainers/jayden
+
+###
+PUT {{host}}/api/trainers/jayden/level-up
+
+###
+PUT {{host}}/api/trainers/jayden/poke-caught
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "이상해씨"
+}
+
+###

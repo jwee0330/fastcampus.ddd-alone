@@ -10,9 +10,13 @@ sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
+	maven {
+		url 'https://jcenter.bintray.com'
+	}
 }
 
 dependencies {
+	implementation 'me.sargunvohra.lib:pokekotlin:2.3.0'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-mustache'

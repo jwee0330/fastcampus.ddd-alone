@@ -5,16 +5,24 @@ import java.util.Objects;
 public class Pokemon {
     private final NationalPokedexNumber number;
     private final String name;
-    private final int captureRate;
+    private final CaptureRate captureRate;
+
+    public Pokemon(final NationalPokedexNumber number, final String name, final CaptureRate captureRate) {
+        this.number = number;
+        this.name = name;
+        this.captureRate = captureRate;
+    }
 
     public Pokemon(final int number, final String name, final int captureRate) {
         this(NationalPokedexNumber.valueOf(number), name, captureRate);
     }
 
     public Pokemon(final NationalPokedexNumber number, final String name, final int captureRate) {
-        this.number = number;
-        this.name = name;
-        this.captureRate = captureRate;
+        this(number, name, CaptureRate.valueOf(captureRate));
+    }
+
+    public boolean capture(final int captureRate) {
+        return this.captureRate.capture(captureRate);
     }
 
     @Override
@@ -28,5 +36,17 @@ public class Pokemon {
     @Override
     public int hashCode() {
         return Objects.hash(number);
+    }
+
+    public int getNumber() {
+        return number.toInt();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getCaptureRate() {
+        return captureRate.toInt();
     }
 }

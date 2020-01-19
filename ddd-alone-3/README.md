@@ -35,4 +35,9 @@
 
 ## 모델링
 
-- 
+- [ ] `Pokemon`은 `National Pokedex` 번호와 이름, `Capture rate`를 가진다.
+- [ ] `Trainer`는 아이디, 레벨, `Pokemon caught`목록, `Item` 목록을 가진다.
+- [ ] `Item`은 몬스터볼, 수퍼볼, 하이퍼볼, 마스터볼 이라는 타입을 가지며, 각 타입은 고정된 보정 승수를 가진다.
+- [ ] `Poke ball`은 `Item`의 속성을 가지며 `Pokemon`의 소유 여부를 가진다.
+- [ ] `Pokemon caught`는 `Pokemon`과 `Trainer`를 가진다.
+ 
